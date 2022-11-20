@@ -18,7 +18,7 @@ public class APIUtility {
                 .header("X-RapidAPI-Host", "contextualwebsearch-websearch-v1.p.rapidapi.com")
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
-        HttpResponse<Path> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofFile(Paths.get("WebSearch")));
+        HttpResponse<Path> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofFile(Paths.get("WebSearch.json")));
         System.out.println(response.body());
 
 
