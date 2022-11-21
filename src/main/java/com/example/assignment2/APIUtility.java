@@ -12,6 +12,8 @@ public class APIUtility {
 
 
     public static void getWebSearchFromRapidApi (String searchTerm) throws IOException, InterruptedException {
+
+        searchTerm = searchTerm.replaceAll("", "%20");
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?q="+searchTerm+"&pageNumber=1&pageSize=10&autoCorrect=true"))
                 .header("X-RapidAPI-Key", "c2f31521fbmshf8ba604ad9ee0a7p1a1a33jsn1dd12cb65231")

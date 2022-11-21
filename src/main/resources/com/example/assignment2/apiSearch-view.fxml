@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="531.0" prefWidth="717.0" style="-fx-background-color: linear-gradient(to top right, #ff7f50, #6a5acd);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.APISearchController">
+   <children>
+      <TextField layoutX="168.0" layoutY="62.0" prefHeight="26.0" prefWidth="324.0" />
+      <Label layoutX="40.0" layoutY="66.0" prefHeight="27.0" prefWidth="114.0" text="Web Search">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="542.0" layoutY="62.0" mnemonicParsing="false" text="Search" />
+      <ListView layoutX="86.0" layoutY="120.0" prefHeight="370.0" prefWidth="530.0" style="-fx-background-color: WHITE;" />
+   </children>
+</AnchorPane>
