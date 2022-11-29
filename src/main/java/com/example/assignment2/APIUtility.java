@@ -1,5 +1,9 @@
 package com.example.assignment2;
 
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
+
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -24,6 +28,27 @@ public class APIUtility {
         System.out.println(response.body());
 
 
+    }
+
+
+    public static APIResponse getWebSearches(){
+
+        Gson gson =new Gson();
+        APIResponse apiResponse = null;
+
+        try (FileReader fileReader = new FileReader("WebSearch.json");
+             JsonReader jsonReader =new JsonReader(fileReader);
+             )
+        {
+            apiResponse =gson.fromJson(jsonReader,APIResponse.class);
+        }
+
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+        return apiResponse;
     }
 
 
