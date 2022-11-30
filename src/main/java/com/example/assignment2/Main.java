@@ -17,11 +17,10 @@ public class Main extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args)  {
+
+
+        APIResponse apiResponse = APIUtility.getWebSearches();
         launch();
-
-
-        APIUtility apiUtility = new APIUtility();
-        apiUtility.getWebSearchFromRapidApi("TaylorSwift");
     }
 }

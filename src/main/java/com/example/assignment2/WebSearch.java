@@ -1,13 +1,19 @@
 package com.example.assignment2;
 
 
+import com.google.gson.annotations.SerializedName;
 
 public class WebSearch {
 
+    @SerializedName("id")
     private String id;
+    @SerializedName("title")
     private String title;
+    @SerializedName("url")
     private String url;
+    @SerializedName("description")
     private String description;
+    @SerializedName("image:")
     private String image;
 
     public String getId() {
@@ -28,5 +34,10 @@ public class WebSearch {
 
     public String getImage() {
         return image;
+    }
+
+    @Override
+    public String toString() {
+        return  title ;
     }
 }
