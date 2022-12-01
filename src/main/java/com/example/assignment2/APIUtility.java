@@ -109,6 +109,73 @@ public class APIUtility {
     }
 
 
+    // Method to get details with id
+    public static WebSearchDetails getWebSearchDetails (String id) throws IOException, InterruptedException {
+
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?q="+id+"&pageNumber=1&pageSize=10&autoCorrect=true"))
+                .header("X-RapidAPI-Key", "c2f31521fbmshf8ba604ad9ee0a7p1a1a33jsn1dd12cb65231")
+                .header("X-RapidAPI-Host", "contextualwebsearch-websearch-v1.p.rapidapi.com")
+                .method("GET", HttpRequest.BodyPublishers.noBody())
+                .build();
+        HttpResponse<String> response = new HttpResponse<String>() {
+            @Override
+            public int statusCode() {
+                return 0;
+            }
+
+            @Override
+            public HttpRequest request() {
+                return null;
+            }
+
+            @Override
+            public Optional<HttpResponse<String>> previousResponse() {
+                return Optional.empty();
+            }
+
+            @Override
+            public HttpHeaders headers() {
+                return null;
+            }
+
+            @Override
+            public String body() {
+                return null;
+            }
+
+            @Override
+            public Optional<SSLSession> sslSession() {
+                return Optional.empty();
+            }
+
+            @Override
+            public URI uri() {
+                return null;
+            }
+
+            @Override
+            public HttpClient.Version version() {
+                return null;
+            }
+        };
+        System.out.println(response.body());
+
+        response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+        Gson gson = new Gson();
+        return gson.fromJson(response.body(),WebSearchDetails.class);
+
+
+
+
+
+
+
+    }
+
+
+
 
     public static APIResponse getWebSearches(){
 

@@ -29,7 +29,27 @@ public class APISearchController  implements Initializable {
     @FXML // fx:id="searchTxt"
     private TextField searchTxt; // Value injected by FXMLLoader
 
+    @FXML // fx:id="detailsBtn"
+    private Button detailsBtn; // Value injected by FXMLLoader
 
+    @FXML
+    void getDetails(ActionEvent event) throws IOException, InterruptedException {
+
+        try {
+            WebSearch webSearchSelected = listView.getSelectionModel().getSelectedItem();
+            WebSearchDetails webSearchDetails = APIUtility.getWebSearchDetails(webSearchSelected.getId());
+            WebSearchDetails[] webSearchDetails1;
+            SceneChanger.changeScene(event, "apiElement-view.fxml",webSearchDetails);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
+
+    }
 
     @FXML
     void OnSearch(ActionEvent event) throws IOException, InterruptedException {
@@ -48,10 +68,16 @@ public class APISearchController  implements Initializable {
 
 
 
+
+
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+
+
 
 
 
