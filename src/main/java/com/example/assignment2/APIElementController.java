@@ -66,7 +66,6 @@ public class APIElementController implements Initializable {
     }
 
 
-
     public void loadWebSearchDetails(String id, String title, String url, String description) {
 
         idLbl.setText(id);

@@ -37,6 +37,8 @@ public class APISearchController  implements Initializable {
     @FXML
     void getDetails(ActionEvent event) throws IOException, InterruptedException {
 
+
+
             WebSearch webSearchSelected = listView.getSelectionModel().getSelectedItem();
 
             SceneChanger.changeScene(event, "apiElement-view.fxml", webSearchSelected.getId(),webSearchSelected.getTitle(),webSearchSelected.getUrl(),webSearchSelected.getDescription());

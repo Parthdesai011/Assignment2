@@ -18,6 +18,9 @@ import java.util.Optional;
 
 public class APIUtility {
 
+
+    //method to get list of objects from api
+
     public static APIResponse getWebSearchFromRapidApi (String searchTerm) throws IOException, InterruptedException {
 
         searchTerm = searchTerm.replaceAll(" ", "%20");
@@ -85,6 +88,8 @@ public class APIUtility {
 
 
 
+
+    //Method to get api response from json file
 
     public static APIResponse getWebSearches(){
 

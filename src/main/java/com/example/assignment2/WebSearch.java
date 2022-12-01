@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class WebSearch {
 
+    //Private variables
     @SerializedName("id")
     private String id;
     @SerializedName("title")
@@ -15,6 +16,7 @@ public class WebSearch {
     private String description;
 
 
+    //getter methods
     public String getId() {
         return id;
     }

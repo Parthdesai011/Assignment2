@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="531.0" prefWidth="717.0" style="-fx-background-color: linear-gradient(to top right, #ff7f50, #6a5acd);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.APISearchController">
+<AnchorPane prefHeight="531.0" prefWidth="717.0" style="-fx-background-color: linear-gradient(to top right, #ff7f50, #6a5acd);" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.APISearchController">
    <children>
       <TextField fx:id="searchTxt" layoutX="168.0" layoutY="62.0" prefHeight="26.0" prefWidth="324.0" promptText="Type Anything you want to search" />
       <Label layoutX="40.0" layoutY="66.0" prefHeight="27.0" prefWidth="114.0" text="Web Search">

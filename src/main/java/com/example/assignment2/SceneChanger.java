@@ -12,6 +12,7 @@ import java.io.IOException;
 public class SceneChanger {
 
 
+    //scene to change scene with details
     public static void changeScene(ActionEvent event, String fxmlFileName,String id,String title, String url, String description) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxmlFileName));
         Scene scene = new Scene(fxmlLoader.load());
@@ -22,6 +23,8 @@ public class SceneChanger {
         stage.setScene(scene);
         stage.show();
     }
+
+    //Scene to get back to home page
 
     public static void changeScene1(ActionEvent event, String fxmlFileName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxmlFileName));

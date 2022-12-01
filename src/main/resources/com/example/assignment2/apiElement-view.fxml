@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="690.0" prefWidth="875.0" style="-fx-background-color: linear-gradient(to top right, #ff7f50, #6a5acd);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.APIElementController">
+<AnchorPane prefHeight="690.0" prefWidth="875.0" style="-fx-background-color: linear-gradient(to top right, #ff7f50, #6a5acd);" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.APIElementController">
    <children>
       <GridPane layoutX="34.0" layoutY="31.0" prefHeight="591.0" prefWidth="682.0">
         <columnConstraints>
