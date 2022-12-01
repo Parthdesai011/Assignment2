@@ -13,8 +13,7 @@ public class WebSearch {
     private String url;
     @SerializedName("description")
     private String description;
-    @SerializedName("image:")
-    private String image;
+
 
     public String getId() {
         return id;
@@ -32,9 +31,7 @@ public class WebSearch {
         return description;
     }
 
-    public String getImage() {
-        return image;
-    }
+
 
     @Override
     public String toString() {

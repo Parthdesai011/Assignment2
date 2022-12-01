@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -21,7 +20,6 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="87.00000610351566" minHeight="0.0" prefHeight="38.20001831054691" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="231.8" minHeight="10.0" prefHeight="193.5999816894531" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="173.19998779296873" minHeight="10.0" prefHeight="173.19998779296873" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label prefHeight="18.0" prefWidth="74.0" text="ID">
@@ -44,17 +42,12 @@
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label text="Image" GridPane.rowIndex="4">
-               <font>
-                  <Font name="System Bold Italic" size="18.0" />
-               </font>
-            </Label>
-            <Label fx:id="id" prefHeight="71.0" prefWidth="235.0" text="Label" GridPane.columnIndex="1">
+            <Label fx:id="idLbl" prefHeight="71.0" prefWidth="235.0" text="Label" GridPane.columnIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="title" prefHeight="77.0" prefWidth="246.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label fx:id="titleLbl" prefHeight="77.0" prefWidth="246.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
@@ -64,12 +57,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="description" minWidth="-Infinity" prefHeight="304.0" prefWidth="0.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="image" fitHeight="167.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="descriptionLbl" prefHeight="193.0" prefWidth="426.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <Button fx:id="backBtn" layoutX="778.0" layoutY="552.0" mnemonicParsing="false" onAction="#back" text="Back" />

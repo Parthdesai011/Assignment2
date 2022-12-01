@@ -9,6 +9,7 @@ public class APIResponse {
 
     @SerializedName("value")
     private WebSearch[] webSearches;
+
     @SerializedName("_type")
     String type;
     @SerializedName("totalCount")

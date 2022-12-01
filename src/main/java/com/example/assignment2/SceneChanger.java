@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -11,11 +12,11 @@ import java.io.IOException;
 public class SceneChanger {
 
 
-    public static void changeScene(ActionEvent event, String fxmlFileName, WebSearchDetails webSearchDetails) throws IOException {
+    public static void changeScene(ActionEvent event, String fxmlFileName,String id,String title, String url, String description) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxmlFileName));
         Scene scene = new Scene(fxmlLoader.load());
-       WebSearchInterface controller = fxmlLoader.getController();
-        controller.loadWebSearchDetails(webSearchDetails);
+       APIElementController controller = fxmlLoader.getController();
+        controller.loadWebSearchDetails(id,title,url,description);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setTitle("Details");
         stage.setScene(scene);
@@ -26,6 +27,7 @@ public class SceneChanger {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxmlFileName));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("Image/R.jpeg")));
         stage.setTitle("Details");
         stage.setScene(scene);
         stage.show();

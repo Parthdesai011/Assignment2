@@ -14,6 +14,8 @@ import java.util.ResourceBundle;
 
 public class APISearchController  implements Initializable {
 
+    APIElementController apiElementController;
+
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
 
@@ -35,14 +37,10 @@ public class APISearchController  implements Initializable {
     @FXML
     void getDetails(ActionEvent event) throws IOException, InterruptedException {
 
-        try {
             WebSearch webSearchSelected = listView.getSelectionModel().getSelectedItem();
-            WebSearchDetails webSearchDetails = APIUtility.getWebSearchDetails(webSearchSelected.getId());
-            WebSearchDetails[] webSearchDetails1;
-            SceneChanger.changeScene(event, "apiElement-view.fxml",webSearchDetails);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+            SceneChanger.changeScene(event, "apiElement-view.fxml", webSearchSelected.getId(),webSearchSelected.getTitle(),webSearchSelected.getUrl(),webSearchSelected.getDescription());
+
 
 
 
