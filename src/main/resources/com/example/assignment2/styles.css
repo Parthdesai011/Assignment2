@@ -12,22 +12,13 @@
 
 
 
-#gridPane{
+#table{
     -fx-font-style: oblique;
     -fx-background-color: #140d09;
     -fx-background-radius: 20px;
     -fx-padding: 10px;
 }
 
-.button {
-    -fx-background-color: black;
-    -fx-text-fill: white;
-}
-
-
-.list-view {
-    -fx-background-radius: 20px;
-}
 
 .text-field{
     -fx-font-style: oblique;
